@@ -20,7 +20,7 @@ class Login extends React.Component {
     }
 
     login = e => {
-        e.preventDefault()
+        e.preventDefault();
         axios
             .post('http://localhost:5000/api/login', {
                 username: 'Lambda',
