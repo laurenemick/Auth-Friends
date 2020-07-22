@@ -59,7 +59,6 @@ class FriendsList extends React.Component {
                 ...this.state.newFriend,
                 [e.target.name]: e.target.value
               }
-
         })
     }
 
@@ -67,18 +66,7 @@ class FriendsList extends React.Component {
         const friends = this.state.friendsList;
         return (
             <div>
-                <div className="friends-list">
-                    {
-                        friends.map(friend => (
-                            <div key={friend.id} className="friend">
-                                <h4>{friend.name}</h4>
-                                <p>Age: {friend.age}</p>
-                                <p>Email: {friend.email}</p>
-                            </div>
-                        ))
-                    }
-                </div>
-                <div className='friends-form'>
+                <div className='friendsForm'>
                     <form onSubmit={this.addFriend}>
                         <label>Name:
                         <input
@@ -110,6 +98,19 @@ class FriendsList extends React.Component {
                         <button>Add friend</button>
                     </form>
                     <br />
+                </div>
+                <br />
+                <br />
+                <div className="friendsList">
+                    {
+                        friends.map(friend => (
+                            <div key={friend.id} className="friend">
+                                <h4>{friend.name}</h4>
+                                <p>Age: {friend.age}</p>
+                                <p>Email: {friend.email}</p>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         )

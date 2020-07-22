@@ -10,15 +10,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ul>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <br />
-          <li>
-            <Link to="/protected">Protected Page</Link>
-          </li>
-        </ul>
+        <nav>
+          <h2 className="navItem">My Friends List</h2>
+          <div className="navItem">
+            <Link className="navLink" to="/login">Login</Link>
+          </div>
+          <div className="navItem">
+            <Link className="navLink" to="/protected">My Friends</Link>
+          </div>
+        </nav>
         <Switch>
           <PrivateRoute exact path="/protected" component={FriendsList} />
           <Route path="/login" component={Login} />{" "}
